@@ -8,3 +8,6 @@ python3.10 python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
 RUN ln -s /usr/bin/python3.10 /usr/bin/python
+
+WORKDIR /workspace
+COPY *.sh ./
