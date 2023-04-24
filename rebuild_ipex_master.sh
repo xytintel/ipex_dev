@@ -1,5 +1,7 @@
-clang-format -i ipex-master/csrc/gpu/aten/operators/*.cpp
-clang-format -i ipex-master/csrc/gpu/aten/operators/*.h
+BASE_DIR=$1
 
-cd ipex-master
+clang-format -i ${BASE_DIR}/csrc/gpu/aten/operators/*.cpp
+clang-format -i ${BASE_DIR}/csrc/gpu/aten/operators/*.h
+
+cd ${BASE_DIR}
 BUILD_WITH_CPU=OFF python setup.py install
