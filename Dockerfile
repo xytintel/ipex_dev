@@ -23,4 +23,4 @@ RUN pip --no-cache-dir install --upgrade \
     pip \
     setuptools
 
-RUN python -m pip install -r requirements.txt
+RUN pip install -r requirements.txt
