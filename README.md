@@ -19,4 +19,7 @@ docker stop ipex_dev_run ; docker rm ipex_dev_run
 # find docker
 docker ps | grep ipex_dev_run
 docker images | grep ipex_dev
+
+# rm image
+docker image rm xxxx
 ```
