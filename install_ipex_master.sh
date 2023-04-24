@@ -5,6 +5,7 @@ pip uninstall -y ipex
 pip uninstall -y intel_extension_for_pytorch
 
 BASE_DIR=$1
+git config --global --add safe.directory ${BASE_DIR}
 cd ${BASE_DIR}
 git checkout origin/master
 
