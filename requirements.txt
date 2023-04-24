@@ -8,3 +8,4 @@ pyyaml
 types-dataclasses
 typing_extensions
 sympy
+cmake
