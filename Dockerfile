@@ -9,10 +9,17 @@ python3.10 python3-pip clang-format opencl-headers clinfo initramfs-tools libdrm
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN ln -s /usr/bin/python3.10 /usr/bin/python
+RUN ln -s /usr/bin/python3 /usr/bin/python
 
 WORKDIR /workspace
 COPY *.sh ./
+COPY *.txt ./
 
 RUN wget -r http://mlpc.intel.com/downloads/gpu-new/components/driver/UBUNTU/agama-ci-devel-602/
 RUN dpkg -i ./mlpc.intel.com/downloads/gpu-new/components/driver/UBUNTU/agama-ci-devel-602/*.deb
+
+RUN pip --no-cache-dir install --upgrade \
+    pip \
+    setuptools
+
+RUN python -m pip install -r requirements.txt
