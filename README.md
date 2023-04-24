@@ -1,7 +1,7 @@
 ### Build docker file
 
 ```bash
-docker build -t ipex_dev .
+docker image rm -f ipex_dev ; docker build -t ipex_dev .
 ```
 
 ### Run docker
