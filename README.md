@@ -8,7 +8,7 @@ docker build -t ipex_dev .
 
 ```bash
 # run docker
-docker run -itd --name ipex_dev_run -v /home/gta/intel:/home/gta/intel ipex_dev
+docker run -itd --name ipex_dev_run -v /home/gta:/home/gta ipex_dev
 
 # into docker
 docker exec -it ipex_dev_run /bin/bash
