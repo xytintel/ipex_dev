@@ -23,3 +23,4 @@ RUN . /root/miniconda3/bin/activate && python -m pip install -r requirements.txt
 
 RUN wget -r http://mlpc.intel.com/downloads/gpu-new/components/driver/UBUNTU/agama-ci-devel-602/
 RUN dpkg -i ./mlpc.intel.com/downloads/gpu-new/components/driver/UBUNTU/agama-ci-devel-602/*.deb
+RUN rm -rf ./mlpc.intel.com
